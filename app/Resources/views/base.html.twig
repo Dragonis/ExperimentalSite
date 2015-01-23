@@ -17,28 +17,23 @@
                     </a>
                 </li>
                 <li>
-                    <a href="/login">
+                    <a href="{{ path('admin_wydzial') }}">
                         Wydzial
-                    </a>
-                </li>
-                <li>
-                    <a href="/login">
-                        Katedra
-                    </a>
-                </li>
-                <li>
-                    <a href="/login">
-                        Pokoj
-                    </a>
-                </li>
-                <li>
-                    <a href="/login">
-                        Pracownik
                     </a>
                 </li>
                 <li>
                     <a href="{{ path('admin_katedra') }}">
                         Katedra
+                    </a>
+                </li>
+                <li>
+                    <a href="{{ path('admin_pokoj') }}">
+                        Pokoj
+                    </a>
+                </li>
+                <li>
+                    <a href="{{ path('admin_pracownik') }}">
+                        Pracownik
                     </a>
                 </li>
                 {% if is_granted('ROLE_USER') %}
