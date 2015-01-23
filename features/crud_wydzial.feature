@@ -28,9 +28,7 @@ Feature: I would like to edit wydzial
     Then I should see "<old-nazwa>"
     When I follow "Edit"
     And I fill in "Nazwa" with "<new-nazwa>"
-
-
-#    And I press "Update"
+    And I press "Update"
 #    And I follow "Back to the list"
 #    Then I should see "<new-nazwa>"
 #    And I should not see "<old-nazwa>"
