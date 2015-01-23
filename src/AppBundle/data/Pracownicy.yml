@@ -1,3 +1,3 @@
-- { imie: Johny, naziwsko: Brawo}
-- { imie: Jan, naziwsko: Kowalski}
-- { imie: Anna, naziwsko: Kowalska}
+- { imie: Johny, nazwisko: Brawo}
+- { imie: Jan, nazwisko: Kowalski}
+- { imie: Anna, nazwisko: Kowalska}
