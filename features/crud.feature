@@ -1,4 +1,4 @@
-Feature: I would like to edit pupils
+Feature: I would like to edit wydzial
 
   Scenario Outline: Insert records
     Given I am on homepage
@@ -9,7 +9,7 @@ Feature: I would like to edit pupils
     And I go to "/admin/wydzial"
     Then I should not see "<surname>"
     And I follow "Create a new entry"
-    Then I should see "Pupil creation"
+    Then I should see "Wydzial creation"
     When I fill in "Name" with "<name>"
     And I fill in "Surname" with "<surname>"
     And I press "Create"
