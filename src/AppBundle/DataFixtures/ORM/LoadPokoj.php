@@ -5,9 +5,9 @@ namespace Gajdaw\BDDTutorial\AppBundle\DataFixtures\ORM;
 use Doctrine\Common\DataFixtures\FixtureInterface;
 use Doctrine\Common\Persistence\ObjectManager;
 use Symfony\Component\Yaml\Yaml;
-use AppBundle\Entity\Pracownik;
+use AppBundle\Entity\Pokoj;
 
-class LoadPracownicy implements FixtureInterface
+class LoadPokoj implements FixtureInterface
 {
     /**
      * {@inheritDoc}
@@ -15,13 +15,12 @@ class LoadPracownicy implements FixtureInterface
     public function load(ObjectManager $manager)
     {
 
-        $filename = __DIR__ . '/../../data/Pracownicy.yml';
+        $filename = __DIR__ . '/../../data/Pokoj.yml';
         $yml = Yaml::parse(file_get_contents($filename));
         foreach ($yml as $item) {
-            $pracownik = new Pracownik();
-            $pracownik->setImie($item['imie']);
-            $pracownik->setNazwisko($item['nazwisko']);
-            $manager->persist($pracownik);
+            $pokoj = new Pokoj();
+            $pokoj->setNumer($item['numer']);
+            $manager->persist($pokoj);
         }
 
         $manager->flush();
