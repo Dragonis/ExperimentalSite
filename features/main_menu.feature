@@ -7,6 +7,8 @@ Feature: Main menu - hyperlinks
         And I fill in "Password" with "loremipsum"
         And I press "Login"
         And I go to homepage
-       Then the "nav" element should contain "Katedra"
-       When I follow "Logout"
-       Then the "nav" element should not contain "Katedra"
+       Then the "nav" element should contain "Homepage"
+       And the "nav" element should contain "Wydzia³"
+       And the "nav" element should contain "Katedra"
+       And the "nav" element should contain "Pokoj"
+       And the "nav" element should contain "Pracownik"

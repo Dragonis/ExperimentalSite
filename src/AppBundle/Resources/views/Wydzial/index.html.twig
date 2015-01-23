@@ -15,12 +15,7 @@
         {% for entity in entities %}
             <tr>
                 <td>{{ loop.index }}.</td>
-            <td>{{ entity.name }}</td>
-            <td>
-                <a href="{{ path('admin_wydzial_show', { 'id': entity.id }) }}">
-                    {{ entity.surname }}
-                </a>
-            </td>
+            
                 <td><a href="{{ path('admin_wydzial_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>
                 <td>{{ entity.nazwa }}</td>
                 <td>
