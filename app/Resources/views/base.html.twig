@@ -9,6 +9,7 @@
     <body>
               <h1>School Register</h1>
         {% block login_logout_panel %}
+            <nav>
             <ul>
                 <li>
                     <a href="{{ path('homepage') }}">
@@ -35,6 +36,11 @@
                         Pracownik
                     </a>
                 </li>
+                <li>
+                    <a href="{{ path('admin_katedra') }}">
+                        Katedra
+                    </a>
+                </li>
                 {% if is_granted('ROLE_USER') %}
                     <li>Logged in as {{ app.user.username }}</li>
                     <li>
@@ -50,6 +56,7 @@
                     </li>
                 {% endif %}
             </ul>
+            </nav>
         {% endblock login_logout_panel %}
         {% block body %}{% endblock %}
         {% block javascripts %}{% endblock %}
